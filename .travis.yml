@@ -4,18 +4,18 @@ cache:
     - node_modules
     - ~/.npm
 node_js:
-    - '12'
+  - '12'
 git:
   depth: 3
 script:
   -yarn test
 notifications:
-  slack: tropic-lab:55dVeN7C5gxptpxz7gNkY6bE
   email:
     recipients:
-       - krlosaren@gmail.com
-       on_success: always
-       on_failure: always
+      - krlosaren@gmail.com
+    on_success: always
+    on_failure: always
+  slack: tropic-lab:55dVeN7C5gxptpxz7gNkY6bE
 deploy:
   provide: heroku
   skip-cleanup: true
