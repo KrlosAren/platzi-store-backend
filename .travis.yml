@@ -1,0 +1,26 @@
+lenguaje: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+    - '12'
+git:
+  depth: 3
+script:
+  -yarn test
+notifications:
+  slack: tropic-lab:55dVeN7C5gxptpxz7gNkY6bE
+  email:
+    recipients:
+       - krlosaren@gmail.com
+       on_success: always
+       on_failure: always
+deploy:
+  provider: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: 58b62f1a-2c6c-4c10-bed0-d47aa2a7deba
+  app: store-platzi-backend
+  on:
+    repo: KrlosAren/platzi-store-backend
